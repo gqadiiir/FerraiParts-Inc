@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.ferrariadmin.CreateOrderController">
+    <stylesheets>
+        <URL value="@/styles/createorder.css" />
+    </stylesheets>
+   <children>
+      <BorderPane>
+         <center>
+            <HBox prefHeight="700.0" prefWidth="750.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="790.0" style="-fx-background-color: white;" styleClass="bordermiddle" stylesheets="">
+                     <children>
+                        <VBox minWidth="750.0" prefHeight="250.0" style="-fx-background-color: white;" styleClass="addcustomer" stylesheets="@../../../../../../../test/src/main/resources/styles/partaddcustomer.css">
+                           <children>
+                              <HBox prefHeight="43.0" prefWidth="336.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="25.0" prefWidth="100.0" text="Invoice">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Oinvoice" prefHeight="25.0" prefWidth="200.0" promptText="ENTER CUSOTMER FIRST NAME">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label alignment="CENTER" prefHeight="25.0" prefWidth="100.0" text="Employee Name">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="employee" prefHeight="25.0" prefWidth="200.0" promptText="Enter Customer Name" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="43.0" prefWidth="336.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="25.0" prefWidth="100.0" text="First Name">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="firstname" prefHeight="25.0" prefWidth="200.0" promptText="Enter Car infromation" />
+                                    <Label alignment="CENTER" prefHeight="25.0" prefWidth="98.0" text="Amount">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="amount" prefHeight="25.0" prefWidth="200.0" promptText="Enter Price Amount" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="43.0" prefWidth="336.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="25.0" prefWidth="100.0" text="Last Name">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="lastname" prefHeight="25.0" prefWidth="200.0" promptText="Enter Customer Name" />
+                                    <Label alignment="CENTER" prefHeight="25.0" prefWidth="100.0" text="Date">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="date" prefHeight="25.0" prefWidth="200.0" promptText="Enter Date" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="99.0" prefWidth="742.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="25.0" prefWidth="100.0" text="Email">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="email" prefHeight="25.0" prefWidth="200.0" promptText="ENTER CUSOTMER FIRST NAME" />
+                                    <Label alignment="CENTER" prefHeight="25.0" prefWidth="100.0" text="Note">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextArea fx:id="notes" prefHeight="99.0" prefWidth="322.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" right="5.0" top="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <HBox alignment="CENTER" minWidth="750.0" prefHeight="30.0" style="-fx-background-color: white;">
+                           <children>
+                              <Button fx:id="partbutton" alignment="CENTER" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: WHITE;" text="Add(F1)">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="20.0" top="5.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <cursor>
+                                    <Cursor fx:constant="MOVE" />
+                                 </cursor>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: white;" text="Delete(F2)">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="20.0" top="5.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="MOVE" />
+                                 </cursor>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: WHITE;" text="Edit(F3)">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="20.0" top="5.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="MOVE" />
+                                 </cursor>
+                              </Button>
+                              <HBox prefHeight="25.0" prefWidth="281.0">
+                                 <children>
+                                    <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: white;" text="Search">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="WAIT" />
+                                       </cursor>
+                                    </Button>
+                                    <TextField promptText="search Invoice">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="20.0" top="5.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </HBox>
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: white;" text="exit(F4)">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="20.0" top="5.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" right="5.0" top="10.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                        <HBox minWidth="750.0" prefHeight="300.0">
+                           <children>
+                              <TableView fx:id="OrderList" editable="true" minWidth="775.0" prefHeight="300.0">
+                                 <columns>
+                                    <TableColumn fx:id="Invoice" prefWidth="75.0" text="Invoice" />
+                                    <TableColumn fx:id="Code" prefWidth="75.0" text="Code" />
+                                    <TableColumn fx:id="FirstName" prefWidth="135.0" text="First Name" />
+                                    <TableColumn fx:id="LastName" prefWidth="122.0" text="Last Name" />
+                                    <TableColumn fx:id="Email" prefWidth="169.0" text="Email" />
+                                    <TableColumn fx:id="Employee" prefWidth="122.0" text="Employee" />
+                                    <TableColumn fx:id="Amount" prefWidth="103.0" text="Amount" />
+                                    <TableColumn fx:id="Date" prefWidth="74.0" text="Date" />
+                                    <TableColumn fx:id="Note" prefWidth="150.0" text="Note" />
+                                 </columns>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TableView>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" right="5.0" top="10.0" />
+                           </VBox.margin>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+         <right>
+            <VBox prefHeight="659.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="30.0" prefWidth="210.0">
+                     <children>
+                        <TextField prefHeight="25.0">
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" prefHeight="5.0" prefWidth="5.0" style="-fx-background-color: WHITE;">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/search-interface-symbol.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="5.0" top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="CustomerId" onSort="#initialize" prefHeight="649.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn fx:id="CustomerIDList" prefWidth="209.0" text="Customer Invoice" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

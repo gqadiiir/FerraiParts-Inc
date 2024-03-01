@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.ferrariadmin.AdminController">
+   <top>
+      <HBox prefHeight="40.0" prefWidth="350.0" style="-fx-background-color: black;" stylesheets="@admin.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="41.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/icons8-ferrari-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/settings.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="280.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="39.0" layoutY="40.0" prefHeight="91.0" prefWidth="272.0">
+               <children>
+                  <HBox id="rpimary-usernameTF" prefHeight="36.0" prefWidth="262.0" spacing="10.0" style="-fx-alignment: center;" styleClass="rpimary-usernameTF" stylesheets="@../../../../../../../test/src/main/resources/styles/primary.css">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/icons8-user-50.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="userTF" prefHeight="26.0" prefWidth="181.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="37.0" prefWidth="272.0" spacing="10.0" stylesheets="@../../../../../../../test/src/main/resources/styles/primary.css">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/icons8-password-50.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="passwordTF" prefHeight="25.0" prefWidth="184.0">
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="98.0" layoutY="131.0" prefHeight="149.0" prefWidth="155.0">
+               <children>
+                  <Button id="primary-loginbtn" fx:id="loginbtn" mnemonicParsing="false" onAction="#loginhandle" prefHeight="37.0" prefWidth="122.0" style="-fx-background-color: black;" styleClass="primary-loginbtn" stylesheets="@admin.css" text="LOGIN" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="primary-Rebtn" fx:id="registerbtn" mnemonicParsing="false" prefHeight="37.0" prefWidth="122.0" style="-fx-background-color: black;" styleClass="primary-Registerbtn" stylesheets="@admin.css" text="REGISTER" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="primary-guestbtn" fx:id="guestbtn" mnemonicParsing="false" prefHeight="37.0" prefWidth="122.0" style="-fx-background-color: black;" styleClass="primary-guestbtn" stylesheets="@admin.css" text="GUEST" textFill="WHITE" />
+               </children>
+            </VBox>
+            <Label fx:id="text" layoutX="24.0" layoutY="14.0" prefHeight="17.0" prefWidth="316.0" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
